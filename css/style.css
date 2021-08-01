@@ -1,0 +1,68 @@
+/*aplicando SCSS a proyecto en un Backoff*/
+/*VARIABLES*/
+.prueba1 {
+  width: 1500px;
+  height: 500px;
+  background-color: black;
+  color: white; }
+
+/*Condicionales*/
+.prueba2 {
+  background-color: green; }
+
+/*bucles*/
+/*sin incluir la 4ta linea*/
+.Prueba3-1 {
+  font-size: 200px; }
+
+.Prueba3-2 {
+  font-size: 400px; }
+
+.Prueba3-3 {
+  font-size: 600px; }
+
+/*incluyendo la 4ta linea*/
+.Prueba3-1 {
+  width: 200px; }
+
+.Prueba3-2 {
+  width: 400px; }
+
+.Prueba3-3 {
+  width: 600px; }
+
+.Prueba3-4 {
+  width: 800px; }
+
+/* Aplicando EACH*/
+.Baloncesto {
+  background-image: url("../img/Baloncesto.jpg");
+  height: 500px; }
+
+.futbol {
+  background-image: url("../img/futbol.jpg");
+  height: 500px; }
+
+.beisbol {
+  background-image: url("../img/beisbol.jpg");
+  height: 500px; }
+
+/*Aplicando MAPAS*/
+.fondo--baloncesto {
+  background-color: blue; }
+
+.fondo--futbol {
+  background-color: green; }
+
+.fondo--beisbol {
+  background-color: orange; }
+
+/*extend*/
+.prueba, .prueba-extend {
+  background-color:black;
+  color:black;
+  padding: 250px;
+  margin: 500px; }
+
+.prueba-extend {
+  width: 250px; }

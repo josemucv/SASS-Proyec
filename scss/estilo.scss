@@ -1,0 +1,84 @@
+/*aplicando SCSS a proyecto en un Backoff*/
+
+/*VARIABLES*/
+
+$tamano: 500px;
+$largo: 250px;
+
+.prueba1 {
+    width: $tamano*3;
+    height: (($tamano/2)+ $largo);
+    background-color:black;
+    color: white;
+}
+
+/*Condicionales*/
+
+$baloncesto: balon;
+
+.prueba2 {
+
+    @if $largo + 250 > $tamano { border: 2px solid black}
+
+
+    @if $largo == 200px { background-color: red;}
+    @else if $largo < 600px { background-color:green}
+    @else if $largo > 600px {background-color: yellowgreen}
+    
+    
+    
+    };
+    
+    /*bucles*/
+
+/*sin incluir la 4ta linea*/
+@for $tamano from 1 to 4 {
+.Prueba3-#{$tamano} {
+    font-size: 200px * $tamano;
+}
+}
+/*incluyendo la 4ta linea*/
+@for $tamano from 1 through 4 {
+    .Prueba3-#{$tamano} {
+        width: 200px * $tamano;
+    }
+}
+
+/* Aplicando EACH*/ 
+
+@each $deporte in Baloncesto, futbol, beisbol {
+.#{$deporte} {
+    background-image: url('../img/#{$deporte}.jpg');
+    height: $tamano;
+}
+    
+}
+
+/*Aplicando MAPAS*/
+
+$deporte: (
+    baloncesto: blue,
+    futbol:green,
+    beisbol: orange,
+);
+
+@each $deporte-color, $bgcolor in $deporte {
+    .fondo--#{$deporte-color}{
+        background-color: $bgcolor;
+    }
+}
+
+/*extend*/
+
+.prueba {
+    background-color:white;
+    color: 200px;
+    padding: $largo;
+    margin: $tamano;
+
+}
+
+.prueba-extend {
+    @extend .prueba;
+    width: $largo;
+}
