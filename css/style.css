@@ -59,8 +59,8 @@
 
 /*extend*/
 .prueba, .prueba-extend {
-  background-color:black;
-  color:black;
+  background-color: white;
+  color: 200px;
   padding: 250px;
   margin: 500px; }
 
